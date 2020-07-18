@@ -13,7 +13,7 @@ bin/launcher stop
 #Docker
 
 docker build -t presto-server:v1 .
-docker run -it -d -p 8080:8080 --network="host" presto-server:v1
+docker run -it -d --network="host" presto-server:v1
 
 docker exec -it e6ff3b7c1667 /bin/sh
 apk add curl
